@@ -27,19 +27,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0a0a0a] text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-[#0a0a0a] text-white`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <main className="pb-24 lg:pb-0">
-            {children}
-          </main>
-          <UserNav />
           <Toaster
             richColors
             position="top-center"
@@ -48,6 +45,8 @@ export default function RootLayout({
               style: { fontSize: "0.95rem", borderRadius: "0.5rem" },
             }}
           />
+          <UserNav />
+          <main className="min-h-screen bg-background pb-24 lg:pb-0">{children}</main>
         </ThemeProvider>
       </body>
     </html>
