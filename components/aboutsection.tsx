@@ -32,20 +32,21 @@ export default function AboutSection() {
           Hi, I'm AZORO PRECIOUS, based in Nigeria
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-[15px]">
-          Hi, I'm AZORO PRECIOUS. An enthusiastic and skilled web developer driven
-          by a passion for building interactive, intuitive, and visually captivating
-          websites. I specialize in creating responsive and high-performing web
-          platforms that offer exceptional usability and engagement.
+          Hi, I’m AZORO PRECIOUS, a passionate web developer dedicated to
+          crafting interactive, intuitive, and visually engaging websites. I
+          focus on building responsive, high-performance web platforms that
+          prioritize both usability and user experience.
         </p>
         <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-[15px]">
-          With more than 3 years of practical experience working with tools and
-          frameworks like HTML, CSS, JavaScript, React, and Node.js, I enjoy
-          tackling challenging projects and constantly upgrading my skills to keep
-          pace with the ever-changing tech landscape.
+          With over two years of hands-on experience working with technologies
+          like HTML, CSS, Next.js, React, Node.js, Tailwind CSS, and Shadcn/UI.
+          I thrive on tackling challenging projects and continually expanding my
+          skills to stay ahead in the ever-evolving tech landscape.
         </p>
         <p className="text-gray-600 dark:text-gray-400 mb-10 leading-relaxed text-[15px]">
-          My aim is to design digital experiences that combine aesthetic appeal with
-          smooth functionality, ensuring users enjoy both beauty and ease of use.
+          My goal is to create digital experiences that seamlessly blend
+          aesthetics with functionality, ensuring users enjoy both beauty and
+          effortless navigation.
         </p>
 
         {/* Cards */}
@@ -59,13 +60,17 @@ export default function AboutSection() {
           <div className="bg-gray-100 dark:bg-[#111] p-5 rounded-lg text-center border border-gray-300 dark:border-gray-800 hover:border-[#ff004f] transition">
             <FaCheckCircle className="text-[#ff004f] text-2xl mx-auto mb-2" />
             <h4 className="font-semibold">Completed</h4>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">5+ Projects</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              5+ Projects
+            </p>
           </div>
 
           <div className="bg-gray-100 dark:bg-[#111] p-5 rounded-lg text-center border border-gray-300 dark:border-gray-800 hover:border-[#ff004f] transition">
             <FaHeadset className="text-[#ff004f] text-2xl mx-auto mb-2" />
             <h4 className="font-semibold">Support</h4>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">Online 24/7</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              Online 24/7
+            </p>
           </div>
         </div>
 
@@ -82,9 +87,6 @@ export default function AboutSection() {
   );
 }
 
-
-
-
 // "use client"
 
 // import Image from 'next/image';
@@ -95,7 +97,7 @@ export default function AboutSection() {
 // export default function AboutSection() {
 //   const { scrollToSection } = useActiveSection();
 //   return (
-      
+
 //       <section
 //         id="about"
 //         className="flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-24 py-12 sm:py-16 md:py-20 md:ml-24 min-h-screen bg-black"
@@ -109,7 +111,6 @@ export default function AboutSection() {
 //           className="object-cover rounded-xl"
 //         />
 //       </div>
-
 
 //         {/* Right Content */}
 //         <div className="max-w-2xl md:pl-16">
@@ -157,7 +158,7 @@ export default function AboutSection() {
 //             </div>
 //           </div>
 
-//           <button 
+//           <button
 //             onClick={() => scrollToSection('contact')}
 //             className="bg-[#ff004f] text-white px-6 py-3 rounded-md font-semibold flex items-center justify-center gap-2 hover:bg-[#e60047] transition"
 //           >
@@ -166,7 +167,6 @@ export default function AboutSection() {
 //           </button>
 //         </div>
 //       </section>
-
 
 //   )
 // };

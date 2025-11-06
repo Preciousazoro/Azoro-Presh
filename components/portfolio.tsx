@@ -123,26 +123,8 @@ export default function Portfolio() {
             role: "Frontend",
             link: "https://poplox.com/",
           },
-          {
-            title: "Engagement Website",
-            image: "https://i.postimg.cc/cLv36hGK/Screenshot-2025-11-06-at-2-28-07-AM.png",
-            description:
-              "A stylish restaurant website with menu, booking, and location pages.",
-            date: "04 May 2024",
-            tech: "Next.js • CSS • API Integration",
-            role: "Backend",
-            link: "https://taskkash-project.onrender.com/",
-          },
-          {
-            title: "Airdrop Website",
-            image: "https://i.postimg.cc/SR3JF01q/Screenshot-2025-11-06-at-2-52-46-AM.png",
-            description:
-              "A modern personal portfolio designed for developers & creatives.",
-            date: "10 Jan 2025",
-            tech: "Next.js • Framer Motion",
-            role: "Frontend",
-            link: "#",
-          },
+
+
           {
             title: "TrustLoan Platform",
             image: "https://i.postimg.cc/qRzrf1tN/Whats-App-Image-2025-11-06-at-2-42-41-AM.jpg",
@@ -153,6 +135,54 @@ export default function Portfolio() {
             role: "Full Stack",
             link: "https://trustloaneth.onrender.com",
           },
+
+          {
+            title: "Airdrop Website",
+            image: "https://i.postimg.cc/SR3JF01q/Screenshot-2025-11-06-at-2-52-46-AM.png",
+            description:
+              "A modern personal portfolio designed for developers & creatives.",
+            date: "10 Jan 2025",
+            tech: "Next.js • Framer Motion",
+            role: "Frontend",
+            link: "#",
+          },
+          
+
+          {
+            title: "Online Library",
+            image: "https://i.postimg.cc/kgnknGVP/Whats-App-Image-2025-11-06-at-5-58-58-AM.jpg",
+            description:
+              "A full-featured blog system with markdown and admin dashboard.",
+            date: "22 Jul 2024",
+            tech: "React • Express • PostgreSQL",
+            role: "Full Stack",
+            link: "https://trustloaneth.onrender.com",
+          },
+          
+
+          {
+            title: "Engagement Website",
+            image: "https://i.postimg.cc/cLv36hGK/Screenshot-2025-11-06-at-2-28-07-AM.png",
+            description:
+              "A stylish restaurant website with menu, booking, and location pages.",
+            date: "04 May 2024",
+            tech: "Next.js • CSS • API Integration",
+            role: "Backend",
+            link: "https://taskkash-project.onrender.com/",
+          },
+          
+
+          {
+            title: "School Management System",
+            image: "https://i.postimg.cc/mrR3z6LS/Screenshot-2025-11-06-at-9-16-02-PM.png",
+            description:
+              "A full-featured blog system with markdown and admin dashboard.",
+            date: "22 Jul 2024",
+            tech: "React • Express • PostgreSQL",
+            role: "Full Stack",
+            link: "#",
+          },
+          
         ].map((project, index) => (
           <motion.div
             key={index}
@@ -182,7 +212,7 @@ export default function Portfolio() {
                 {project.title}
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                Full Stack Development
+                Web Developer
               </p>
               <span className="text-[#ff004f] text-sm font-semibold flex items-center gap-2">
                 View More <span>↗</span>

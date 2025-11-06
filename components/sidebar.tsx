@@ -1,16 +1,8 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  Home,
-  User,
-  Code,
-  Briefcase,
-  Layers,
-  Mail,
-} from "lucide-react"; // clean icons
+import { Home, User, Code, Briefcase, Layers, Mail } from "lucide-react";
 
 // Hook for tracking & scrolling to active section
 export const useActiveSection = () => {
@@ -18,9 +10,7 @@ export const useActiveSection = () => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
     setActiveSection(sectionId);
   };
 
@@ -64,15 +54,26 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="hidden md:fixed md:flex flex-col justify-between items-center py-8 w-24 bg-[#0e0e0e]/95 border-r border-gray-800 min-h-screen backdrop-blur-md">
-      {/* Logo */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="h-12 w-12 rounded-full bg-[#ff004f] flex items-center justify-center text-lg font-bold text-white mb-12 shadow-lg shadow-[#ff004f]/30"
-      >
-        AP
-      </motion.div>
+    <aside
+      className="hidden md:fixed md:flex flex-col justify-between items-center py-8 w-24 
+                 bg-background border-r border-border min-h-screen backdrop-blur-md 
+                 transition-colors duration-300"
+    >
+            {/* Logo */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-12"
+              >
+                <div className="h-12 w-12 rounded-full overflow-hidden shadow-lg shadow-[#ff004f]/30">
+                  <img
+                    src="/MYPFP.png"
+                    alt="AZ Logo"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </motion.div>
+
 
       {/* Navigation */}
       <nav className="flex flex-col items-center gap-10">
@@ -83,12 +84,14 @@ export default function Sidebar() {
             whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.95 }}
             className={`relative flex flex-col items-center gap-1 cursor-pointer transition-all duration-300 ${
-              activeSection === id ? "text-[#ff004f]" : "text-gray-400 hover:text-white"
+              activeSection === id
+                ? "text-[#ff004f]"
+                : "text-muted-foreground hover:text-foreground"
             }`}
           >
             <Icon
               className={`w-5 h-5 ${
-                activeSection === id ? "text-[#ff004f]" : "text-gray-400"
+                activeSection === id ? "text-[#ff004f]" : "text-muted-foreground"
               }`}
             />
             <span className="text-[10px] font-medium tracking-wide uppercase">
@@ -107,7 +110,7 @@ export default function Sidebar() {
       </nav>
 
       {/* Bottom Arrow */}
-      <div className="flex flex-col items-center mt-16 text-gray-500">
+      <div className="flex flex-col items-center mt-16 text-muted-foreground">
         <motion.svg
           animate={{ y: [0, 4, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
@@ -128,7 +131,6 @@ export default function Sidebar() {
     </aside>
   );
 }
-
 
 
 

@@ -34,10 +34,11 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark" // ✅ force dark as default
-          enableSystem={false} // ✅ disable system mode
+          defaultTheme="dark" // ✅ dark mode as default
+          enableSystem={false} // ✅ disable system preference
           disableTransitionOnChange
         >
+          {/* Global toaster notifications */}
           <Toaster
             richColors
             position="top-center"
@@ -46,14 +47,37 @@ export default function RootLayout({
               style: { fontSize: "0.95rem", borderRadius: "0.5rem" },
             }}
           />
-          
+
           {/* Global Navigation */}
           <UserNav />
 
-          {/* Main Content */}
+          {/* Main Page Content */}
           <main className="min-h-screen bg-background pb-24 lg:pb-0">
             {children}
           </main>
+
+          {/* ✅ Floating WhatsApp Button */}
+                  {/* ✅ Floating WhatsApp Button — Always visible, even on small screens */}
+<a
+  href="https://wa.me/2348122844144"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 group p-0 rounded-2xl shadow-xl hover:scale-110 transition-transform duration-300 z-[9999] block"
+>
+  {/* WhatsApp Icon Image */}
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    alt="WhatsApp"
+    className="w-16 h-16 md:w-14 md:h-14 rounded-2xl shadow-lg"
+  />
+
+  {/* Hover Tooltip (hidden on mobile automatically due to hover) */}
+  <span className="absolute right-20 bg-[#25D366] text-white px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm whitespace-nowrap hidden md:block">
+    Chat with me
+  </span>
+</a>
+
+
         </ThemeProvider>
       </body>
     </html>

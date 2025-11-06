@@ -85,12 +85,12 @@ export default function ContactSection() {
           >
             <div className="text-center">
               <i className="ri-messenger-line text-4xl text-[#ff004f] mb-4"></i>
-              <h3 className="font-bold text-lg">Messenger</h3>
+              <h3 className="font-bold text-lg">Twitter</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                user.fb123
+                @most_rugged001
               </p>
               <a
-                href="#"
+                href="https://x.com/most_rugged001"
                 className="text-[#ff004f] text-sm font-semibold flex justify-center items-center gap-1 hover:gap-2 transition-all"
               >
                 Write me →
