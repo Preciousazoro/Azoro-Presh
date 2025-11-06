@@ -75,13 +75,14 @@ export default function AboutSection() {
         </div>
 
         <button
-          onClick={() => scrollToSection("contact")}
-          className="bg-[#ff004f] text-white px-6 py-3 rounded-md font-semibold flex items-center justify-center gap-2 
-          hover:bg-[#e60047] transition"
-        >
-          <FaUser className="w-4 h-4" />
-          Contact me
-        </button>
+  onClick={() => scrollToSection("contact")}
+  className="w-full bg-[#ff004f] text-white px-10 py-3 rounded-md font-semibold flex items-center justify-center gap-2 
+             hover:bg-[#e60047] transition"
+>
+  <FaUser className="w-4 h-4" />
+  Contact me
+</button>
+
       </div>
     </section>
   );

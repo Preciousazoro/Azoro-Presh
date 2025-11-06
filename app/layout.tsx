@@ -57,21 +57,25 @@ export default function RootLayout({
           </main>
 
           {/* ✅ Floating WhatsApp Button */}
-                  {/* ✅ Floating WhatsApp Button — Always visible, even on small screens */}
+
+                {/* ✅ Floating WhatsApp Button — Always visible */}
 <a
   href="https://wa.me/2348122844144"
   target="_blank"
   rel="noopener noreferrer"
-  className="fixed bottom-6 right-6 group p-0 rounded-2xl shadow-xl hover:scale-110 transition-transform duration-300 z-[9999] block"
+  className="
+    fixed bottom-28 sm:bottom-6 right-3 group p-0 rounded-2xl shadow-xl 
+    hover:scale-110 transition-transform duration-300 z-[9999]
+  "
 >
   {/* WhatsApp Icon Image */}
   <img
     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
     alt="WhatsApp"
-    className="w-16 h-16 md:w-14 md:h-14 rounded-2xl shadow-lg"
+    className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl shadow-lg"
   />
 
-  {/* Hover Tooltip (hidden on mobile automatically due to hover) */}
+  {/* Hover Tooltip (hidden on small screens) */}
   <span className="absolute right-20 bg-[#25D366] text-white px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm whitespace-nowrap hidden md:block">
     Chat with me
   </span>

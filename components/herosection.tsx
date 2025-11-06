@@ -32,7 +32,7 @@ export default function HeroSection() {
         </h1>
 
         <h2 className="text-2xl font-semibold mb-5 text-gray-700 dark:text-gray-200">
-          Frontend Developer
+          Web Developer
         </h2>
 
         <p className="text-gray-600 dark:text-gray-400 mb-10 leading-relaxed text-[15px]">
