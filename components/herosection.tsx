@@ -4,10 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTwitter, FaUser, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { useActiveSection } from "./sidebar";
 
 {/* ===== Hero Section ===== */}
 
   export default function HeroSection() {
+    const { scrollToSection } = useActiveSection();
+    
     return ( 
 
       <section
@@ -37,14 +40,14 @@ import { MdEmail } from "react-icons/md";
           </p>
 
            <div>
-             <Link
-              href="#about"
+             <button
+              onClick={() => scrollToSection('about')}
               className="inline-flex items-center gap-2 bg-[#ff004f] text-white px-5 py-2 rounded-md font-semibold hover:bg-[#e60047] transition"
               aria-label="More About me"
             >
               <FaUser className="w-4 h-4" />
               <span className="text-sm">More About me!</span>
-            </Link>
+            </button>
           </div>
 
           {/* Contact Info */}

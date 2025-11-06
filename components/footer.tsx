@@ -1,10 +1,10 @@
 "use client"
 
 import { Twitter, Facebook, Instagram } from 'lucide-react';
-
-
+import { useActiveSection } from './sidebar';
 
 export default function Footer() {
+  const { scrollToSection } = useActiveSection();
   return (
 
     <footer className="w-full bg-black text-white mt-10 sm:mt-16 md:mt-24 border-t border-gray-800 py-12 md:py-16">
@@ -28,20 +28,35 @@ export default function Footer() {
       <div>
         <h2 className="text-4xl font-extrabold tracking-wide">MR PRESH</h2>
         <p className="text-gray-400 text-base font-medium mt-1">
-          Full Stack Developer
+          Web Developer
         </p>
       </div>
 
       {/* CENTER — NAVIGATION */}
       <ul className="flex justify-center gap-10 text-lg font-semibold">
         <li>
-          <a href="#services" className="hover:text-[#ff004f] transition">Services</a>
+          <button 
+            onClick={() => scrollToSection('services')} 
+            className="hover:text-[#ff004f] transition"
+          >
+            Services
+          </button>
         </li>
         <li>
-          <a href="#portfolio" className="hover:text-[#ff004f] transition">Work</a>
+          <button 
+            onClick={() => scrollToSection('work')} 
+            className="hover:text-[#ff004f] transition"
+          >
+            Work
+          </button>
         </li>
         <li>
-          <a href="#contact" className="hover:text-[#ff004f] transition">Contact</a>
+          <button 
+            onClick={() => scrollToSection('contact')} 
+            className="hover:text-[#ff004f] transition"
+          >
+            Contact
+          </button>
         </li>
       </ul>
 

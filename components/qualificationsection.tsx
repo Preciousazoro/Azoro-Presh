@@ -42,7 +42,7 @@ export default function QualificationSection() {
             <div className="relative pl-8 border-l-2 border-gray-800">
               <span className="absolute -left-[9px] top-1.5 w-4 h-4 bg-[#ff004f] rounded-full"></span>
               <h4 className="font-semibold text-lg">Udemy Course</h4>
-              <p className="text-gray-400 text-sm mb-1">
+              <p className="text-gray-400 flex gap-1 text-sm mb-1">
                 <FaAward className="text-[#ff004f]" /> Web Development course
               </p>
               <p className="text-[#ff004f] text-sm flex items-center gap-1 mt-2">
@@ -68,7 +68,7 @@ export default function QualificationSection() {
                 JavaScript, React, and Node.js.
               </p>
               <p className="text-[#ff004f] text-sm flex items-center gap-1 mt-2">
-                <span>📅</span> 2024 – 2025
+                <FaCalendarAlt className="text-[#ff004f]" /> 2024 – 2025
               </p>
             </div>
 
@@ -80,7 +80,7 @@ export default function QualificationSection() {
                 Contributed to the design and implementation of Poplox Website.
               </p>
               <p className="text-[#ff004f] text-sm flex items-center gap-1 mt-2">
-                <span>📅</span> 2024 – 2025
+                <FaCalendarAlt className="text-[#ff004f]" /> 2024 – 2025
               </p>
             </div>
           </div>

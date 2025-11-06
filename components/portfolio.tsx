@@ -97,28 +97,29 @@
           {(() => {
             const projects = [
               {
-                title: "E-commerce Web App",
-                image: "/projects/ecommerce.png",
+                title: "Boosting Website",
+                image: "https://i.postimg.cc/zX5HS5mt/Screenshot-2025-11-06-at-1-44-36-AM.png",
                 description:
-                  "A modern online shopping platform with cart, checkout, and product filtering.",
+                  "Helping creators and brands boost their social media presence with powerful tools designed to grow your audience and engagement.",
                 date: "12 Aug 2024",
                 tech: "React • Tailwind • Node.js • MongoDB",
-                role: "Full Stack",
-                link: "#",
+                role: "Frontend",
+                link: "https://poplox.com/",
               },
               {
-                title: "Restaurant Website",
-                image: "/projects/restaurant.png",
+                title: "Engagement Website",
+                image: "https://i.postimg.cc/cLv36hGK/Screenshot-2025-11-06-at-2-28-07-AM.png",
                 description:
                   "A stylish restaurant website with menu, booking, and location pages.",
                 date: "04 May 2024",
                 tech: "Next.js • CSS • API Integration",
-                role: "Frontend",
-                link: "#",
+                role: "Backend",
+                link: "https://taskkash-project.onrender.com/",
+
               },
               {
-                title: "Portfolio Website",
-                image: "/projects/portfolio.png",
+                title: "Airdrop Website",
+                image: "https://i.postimg.cc/SR3JF01q/Screenshot-2025-11-06-at-2-52-46-AM.png",
                 description:
                   "A modern personal portfolio designed for developers & creatives.",
                 date: "10 Jan 2025",
@@ -127,14 +128,14 @@
                 link: "#",
               },
               {
-                title: "Blog Platform",
-                image: "/projects/blog.png",
+                title: "TrustLoan Platform",
+                image: "https://i.postimg.cc/qRzrf1tN/Whats-App-Image-2025-11-06-at-2-42-41-AM.jpg",
                 description:
                   "A full-featured blog system with markdown and admin dashboard.",
                 date: "22 Jul 2024",
                 tech: "React • Express • PostgreSQL",
                 role: "Full Stack",
-                link: "#",
+                link: "https://trustloaneth.onrender.com",
               },
               {
                 title: "Task Manager App",
@@ -266,10 +267,13 @@
                               <a
                                 href={selectedProject.link}
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-[#ff004f] hover:underline"
+                                onClick={(e) => e.stopPropagation()} // prevent modal from closing
                               >
                                 {selectedProject.link}
                               </a>
+
                             </p>
                           </div>
                         </div>

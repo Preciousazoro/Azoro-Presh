@@ -1,14 +1,47 @@
 
 "use client"
 
-const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
+import { useState, useEffect } from 'react';
+
+export const useActiveSection = () => {
+  const [activeSection, setActiveSection] = useState('home');
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setActiveSection(sectionId);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'skills', 'work', 'services', 'contact'];
+      const scrollPosition = window.scrollY + 200;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return { activeSection, setActiveSection, scrollToSection };
 };
 
 export default function Sidebar() {
+  const { activeSection, setActiveSection, scrollToSection } = useActiveSection();
   return (
     <aside className="hidden md:fixed md:flex flex-col justify-between items-center py-10 w-24 bg-[#0e0e0e] border-r border-gray-800 min-h-screen">
         {/* Logo + Nav */}
@@ -19,7 +52,7 @@ export default function Sidebar() {
           </div>
 
           {/* Navbar */}
-          <nav className="flex flex-col items-center gap-16 font-semibold tracking-wider uppercase text-[13px]">
+          <nav className="flex flex-col items-center gap-18 font-bold tracking-wider uppercase text-[14px]">
             {[
               { label: "Home", id: "home" },
               { label: "About", id: "about" },
@@ -31,14 +64,14 @@ export default function Sidebar() {
               <div
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative -rotate-90 ${
-                  item.label === "Home"
-                    ? "text-[#ff004f] font-bold"
+                className={`relative -rotate-90 font-bold ${
+                  activeSection === item.id.toLowerCase()
+                    ? "text-[#ff004f]"
                     : "text-gray-400 hover:text-white"
                 } cursor-pointer transition-colors`}
               >
                 {item.label}
-                {item.label === "Home" && (
+                {activeSection === item.id.toLowerCase() && (
                   <span className="absolute -right-4 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#ff004f]" />
                 )}
               </div>

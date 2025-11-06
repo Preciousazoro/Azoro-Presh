@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaUser, FaHeadset, FaAward, FaCheckCircle } from 'react-icons/fa';
-
+import { useActiveSection } from './sidebar';
 
 export default function AboutSection() {
+  const { scrollToSection } = useActiveSection();
   return (
       
       <section
@@ -69,13 +70,13 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <Link 
-            href="#contact" 
+          <button 
+            onClick={() => scrollToSection('contact')}
             className="bg-[#ff004f] text-white px-6 py-3 rounded-md font-semibold flex items-center justify-center gap-2 hover:bg-[#e60047] transition"
           >
             <FaUser className="w-4 h-4" />
             Contact me
-          </Link>
+          </button>
         </div>
       </section>
 
