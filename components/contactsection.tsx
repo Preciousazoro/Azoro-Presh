@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -99,7 +90,7 @@ export default function ContactSection() {
                 @most_rugged001
               </p>
               <a
-                href="https://x.com/most_rugged001"
+                href="https://x.com/m0st_rugged     "
                 className="text-[#ff004f] text-sm font-semibold flex justify-center items-center gap-1 hover:gap-2 transition-all"
               >
                 Write me →

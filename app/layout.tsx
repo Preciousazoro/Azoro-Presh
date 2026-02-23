@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MostRugged",
+  title: "AZORO PRECIOUS",
   description:
     "Web Developer | Next.js • React • Node.js • Tailwind • Shadcn",
   icons: {

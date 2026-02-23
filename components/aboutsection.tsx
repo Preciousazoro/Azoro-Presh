@@ -16,7 +16,7 @@ export default function AboutSection() {
       {/* Left Image */}
       <div className="hidden md:relative md:block w-[280px] h-[400px] md:w-[360px] md:h-[500px] mb-10 md:mb-0">
         <Image
-          src="/ABOUT-PFP.PNG"
+          src="/MyPics.png"
           alt="About Precious"
           fill
           className="object-cover rounded-xl shadow-lg"
@@ -29,24 +29,16 @@ export default function AboutSection() {
         <h2 className="text-4xl font-extrabold mb-6">About me</h2>
 
         <h3 className="text-xl font-bold mb-4">
-          Hi, I'm AZORO PRECIOUS, based in Nigeria
+          Hi, I’m Azoro Precious, a Frontend & Web Application Developer based in Nigeria.
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-[15px]">
-          Hi, I’m AZORO PRECIOUS, a passionate web developer dedicated to
-          crafting interactive, intuitive, and visually engaging websites. I
-          focus on building responsive, high-performance web platforms that
-          prioritize both usability and user experience.
+          I specialize in building modern, responsive, and high-performance web applications with a strong focus on clean UI, usability, and scalability. I enjoy transforming ideas and designs into functional, intuitive digital experiences that feel fast and effortless for users.
         </p>
         <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-[15px]">
-          With over two years of hands-on experience working with technologies
-          like HTML, CSS, Next.js, React, Node.js, Tailwind CSS, and Shadcn/UI.
-          I thrive on tackling challenging projects and continually expanding my
-          skills to stay ahead in the ever-evolving tech landscape.
+          With over two years of hands-on experience, I have worked with technologies such as HTML, CSS, JavaScript, React, Next.js, Node.js, Tailwind CSS, and Shadcn/UI to build real-world projects and user-focused interfaces. I’m passionate about writing clean, maintainable code and continuously improving my skills to stay aligned with modern web standards.
         </p>
         <p className="text-gray-600 dark:text-gray-400 mb-10 leading-relaxed text-[15px]">
-          My goal is to create digital experiences that seamlessly blend
-          aesthetics with functionality, ensuring users enjoy both beauty and
-          effortless navigation.
+          I thrive in collaborative environments, enjoy solving complex problems, and focus on building high-performance, accessible, and visually polished web applications.
         </p>
 
         {/* Cards */}
@@ -61,7 +53,7 @@ export default function AboutSection() {
             <FaCheckCircle className="text-[#ff004f] text-2xl mx-auto mb-2" />
             <h4 className="font-semibold">Completed</h4>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              5+ Projects
+              7+ Projects
             </p>
           </div>
 

@@ -61,7 +61,7 @@ export default function Experience() {
               <Palette className="text-[#ff004f] w-6 h-6" />
             </div>
             <div>
-              <h3 className="text-xl font-semibold">UI / UX Designer</h3>
+              <h3 className="text-xl font-semibold">Web App Developer</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
                 More than 1 year
               </p>
