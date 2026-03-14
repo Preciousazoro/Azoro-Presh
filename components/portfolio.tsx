@@ -114,16 +114,26 @@ export default function Portfolio() {
       >
         {[
           {
-            title: "Poplox",
-            image: "https://i.postimg.cc/zX5HS5mt/Screenshot-2025-11-06-at-1-44-36-AM.png",
+            title: "TaskKash",
+            image: "https://i.postimg.cc/cLv36hGK/Screenshot-2025-11-06-at-2-28-07-AM.png",
             description:
-              "Helping creators and brands boost their social media presence with powerful tools designed to grow your audience and engagement.",
-            date: "12 Aug 2024",
-            tech: "React • Tailwind • Node.js • MongoDB",
-            role: "Frontend",
-            link: "https://poplox.com/",
+              "A modern web-based task and project management platform designed to help users organize tasks, track productivity, and manage workflows efficiently.",
+            date: "04 Aug 2025",
+            tech: "Next.js • CSS • API Integration",
+            role: "Backend",
+            link: "https://taskkash.xyz",
           },
 
+          {
+            title: "MoonChad",
+            image: "https://i.postimg.cc/SR3JF01q/Screenshot-2025-11-06-at-2-52-46-AM.png",
+            description:
+              "A Meme Coin Project built on a decentralized web platform. This project focuses on the initial launch and distribution phase for a new cryptocurrency token.",
+            date: "10 Jan 2025",
+            tech: "Next.js • Framer Motion",
+            role: "Frontend",
+            link: "https://moon-chad.vercel.app/",
+          },
 
           {
             title: "TrustLoan Platform",
@@ -137,18 +147,6 @@ export default function Portfolio() {
           },
 
           {
-            title: "MoonChad",
-            image: "https://i.postimg.cc/SR3JF01q/Screenshot-2025-11-06-at-2-52-46-AM.png",
-            description:
-              "A Meme Coin Project built on a decentralized web platform. This project focuses on the initial launch and distribution phase for a new cryptocurrency token.",
-            date: "10 Jan 2025",
-            tech: "Next.js • Framer Motion",
-            role: "Frontend",
-            link: "https://moon-chad.vercel.app/",
-          },
-          
-
-          {
             title: "Online Library",
             image: "https://i.postimg.cc/kgnknGVP/Whats-App-Image-2025-11-06-at-5-58-58-AM.jpg",
             description:
@@ -158,19 +156,7 @@ export default function Portfolio() {
             role: "Full Stack",
             link: "https://criminology-and-security-library.onrender.com/",
           },
-          
-
-          {
-            title: "TaskKash",
-            image: "https://i.postimg.cc/cLv36hGK/Screenshot-2025-11-06-at-2-28-07-AM.png",
-            description:
-              "A modern web-based task and project management platform designed to help users organize tasks, track productivity, and manage workflows efficiently.",
-            date: "04 Aug 2025",
-            tech: "Next.js • CSS • API Integration",
-            role: "Backend",
-            link: "https://taskkash-project.onrender.com/",
-          },
-          
+        
 
           {
             title: "Gift Card Wave",
@@ -203,6 +189,17 @@ export default function Portfolio() {
             tech: "React • Express • PostgreSQL",
             role: "Frontend Developer",
             link: "https://dynamiqerra.com/",
+          },
+
+          {
+            title: "Poplox",
+            image: "https://i.postimg.cc/zX5HS5mt/Screenshot-2025-11-06-at-1-44-36-AM.png",
+            description:
+              "Helping creators and brands boost their social media presence with powerful tools designed to grow your audience and engagement.",
+            date: "12 Aug 2024",
+            tech: "React • Tailwind • Node.js • MongoDB",
+            role: "Frontend",
+            link: "https://poplox.com/",
           },
           
         ].map((project, index) => (
