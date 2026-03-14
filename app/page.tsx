@@ -131,7 +131,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col scroll-smooth bg-white text-gray-900 dark:bg-[#0a0a0a] dark:text-white transition-colors duration-300">
+    <main className="flex flex-col scroll-smooth bg-white text-gray-900 dark:bg-[#0a0a0a] dark:text-white transition-colors duration-300 overflow-x-hidden">
       {/* ===== Theme Toggle ===== */}
       <ModeToggle />
 

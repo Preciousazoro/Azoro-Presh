@@ -53,7 +53,7 @@ export default function HeroSection() {
 </div>
 
 
-        <h1 className="text-6xl md:text-7xl font-extrabold mb-4 leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight wrap-break-word">
           Hi, I&apos;m <span className="text-[#ff004f]">PRECIOUS</span>
         </h1>
 
@@ -104,7 +104,7 @@ export default function HeroSection() {
       </div>
 
       {/* Right Image */}
-      <div className="mt-16 md:mt-0 relative w-[300px] h-[400px] md:w-[380px] md:h-[500px]">
+      <div className="mt-16 md:mt-0 relative w-[250px] h-[350px] sm:w-[300px] sm:h-[400px] md:w-[380px] md:h-[500px] max-w-full">
         <Image
           src="/MyPhoto.png"
           alt="Precious"

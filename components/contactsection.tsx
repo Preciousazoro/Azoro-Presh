@@ -87,7 +87,7 @@ export default function ContactSection() {
               <i className="ri-messenger-line text-4xl text-[#ff004f] mb-4"></i>
               <h3 className="font-bold text-lg">Twitter</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                @most_rugged001
+                @m0st_rugged
               </p>
               <a
                 href="https://x.com/m0st_rugged     "
@@ -114,8 +114,6 @@ export default function ContactSection() {
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(data),
             });
-
-            await new Promise((resolve) => setTimeout(resolve, 500));
 
             try {
               const res = await sendPromise;

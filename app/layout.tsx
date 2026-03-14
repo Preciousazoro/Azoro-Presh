@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider"; // shadcn theme provider
 import { Toaster } from "sonner"; // ✅ for toast notifications
 import UserNav from "@/components/navview"; // Navigation
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "AZORO PRECIOUS",
@@ -33,7 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-[#0a0a0a] text-white transition-colors duration-300`}
+        className="font-sans antialiased bg-[#0a0a0a] text-white transition-colors duration-300 overflow-x-hidden"
       >
         <ThemeProvider
           attribute="class"
@@ -55,7 +44,7 @@ export default function RootLayout({
           <UserNav />
 
           {/* Main Page Content */}
-          <main className="min-h-screen bg-background pb-24 lg:pb-0">
+          <main className="min-h-screen bg-background pb-24 lg:pb-0 overflow-x-hidden">
             {children}
           </main>
 
@@ -67,7 +56,7 @@ export default function RootLayout({
             rel="noopener noreferrer"
             className="
               fixed bottom-28 sm:bottom-6 right-3 group p-0 rounded-2xl shadow-xl 
-              hover:scale-110 transition-transform duration-300 z-[9999]
+              hover:scale-110 transition-transform duration-300 z-9999
             "
           >
             {/* WhatsApp Icon Image */}

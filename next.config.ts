@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
         pathname: "**",
       },
     ],
+    // Increase timeout for external images
+    minimumCacheTTL: 60,
+    // Disable optimization for external images to avoid timeouts
+    unoptimized: true,
   },
 };
 
