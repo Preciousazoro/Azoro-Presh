@@ -20,6 +20,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables for the contact form to work:
+
+```env
+# Gmail SMTP Configuration (required for contact form)
+EMAIL_USER=your-gmail-address@gmail.com
+EMAIL_PASS=your-gmail-app-password
+CONTACT_RECEIVER=azoroprecious@outlook.com
+```
+
+**Important Gmail Setup:**
+1. Enable 2-factor authentication on your Gmail account
+2. Generate an App Password: Go to Google Account → Security → App Passwords
+3. Use the App Password (16-character code) as EMAIL_PASS
+4. Regular Gmail password won't work - you must use an App Password
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

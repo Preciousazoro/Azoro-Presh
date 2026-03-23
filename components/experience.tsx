@@ -1,16 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Palette, Server } from "lucide-react";
+import { Code, Palette, Server, 
+  // React & Next.js
+  Box, 
+  // Node.js
+  Server as NodeIcon,
+  // JavaScript
+  Code2,
+  // Tailwind CSS
+  Palette as CssIcon,
+  // Shadcn/UI
+  Layout,
+  // API
+  Zap,
+  // Database
+  Database,
+  // TypeScript
+  FileCode,
+  // AI
+  Brain } from "lucide-react";
 
 export default function Experience() {
-  const skills = [
-    { name: "Next.js", level: 80 },
-    { name: "React", level: 85 },
-    { name: "Node.js", level: 75 },
-    { name: "Tailwind CSS", level: 90 },
-    { name: "Shadcn/UI", level: 70 },
-  ];
+  const skillsData = {
+    advanced: [
+      { name: "React", icon: Box, color: "text-cyan-500" },
+      { name: "Next.js", icon: Box, color: "text-gray-800 dark:text-white" },
+      { name: "Node.js", icon: NodeIcon, color: "text-green-600" },
+      { name: "JavaScript (ES6+)", icon: Code2, color: "text-yellow-500" },
+    ],
+    intermediate: [
+      { name: "Tailwind CSS", icon: CssIcon, color: "text-cyan-600" },
+      { name: "Shadcn/UI", icon: Layout, color: "text-slate-600" },
+      { name: "API Integration", icon: Zap, color: "text-purple-500" },
+      { name: "MongoDB / PostgreSQL", icon: Database, color: "text-green-700" },
+    ],
+    basic: [
+      { name: "TypeScript", icon: FileCode, color: "text-blue-600" },
+      { name: "AI Prompt Evaluation", icon: Brain, color: "text-pink-500" },
+    ],
+  };
 
   return (
     <section
@@ -29,177 +58,125 @@ export default function Experience() {
         <p className="text-[#ff004f] font-semibold mb-2 uppercase tracking-wide">
           My Abilities
         </p>
-        <h2 className="text-4xl md:text-5xl font-extrabold">My Experience</h2>
+        <h2 className="text-4xl md:text-5xl font-extrabold">Skills</h2>
       </motion.div>
 
-      {/* ===== Content Grid ===== */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full max-w-6xl">
-        {/* === Left Column: Roles === */}
+      {/* ===== Skills Section ===== */}
+      <div className="w-full max-w-6xl space-y-12">
+        {/* Advanced Skills */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="space-y-10"
         >
-          {/* Frontend Developer */}
-          <div className="flex items-start gap-4 group">
-            <div className="p-3 bg-gray-100 dark:bg-[#1a1a1a] rounded-lg group-hover:bg-[#ff004f]/10 transition">
-              <Code className="text-[#ff004f] w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Frontend Developer</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                More than 2 years
-              </p>
-            </div>
-          </div>
-
-          {/* UI/UX Designer */}
-          <div className="flex items-start gap-4 group">
-            <div className="p-3 bg-gray-100 dark:bg-[#1a1a1a] rounded-lg group-hover:bg-[#ff004f]/10 transition">
-              <Palette className="text-[#ff004f] w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Web App Developer</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                More than 1 year
-              </p>
-            </div>
-          </div>
-
-          {/* Backend Developer */}
-          <div className="flex items-start gap-4 group">
-            <div className="p-3 bg-gray-100 dark:bg-[#1a1a1a] rounded-lg group-hover:bg-[#ff004f]/10 transition">
-              <Server className="text-[#ff004f] w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Backend Developer</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">1 year</p>
-            </div>
+          <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+            Advanced
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {skillsData.advanced.map((skill, index) => {
+              const IconComponent = skill.icon;
+              return (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ 
+                    scale: 1.05, 
+                    boxShadow: "0 10px 25px rgba(255, 0, 79, 0.2)" 
+                  }}
+                  className="bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-800 
+                           rounded-lg p-4 flex flex-col items-center justify-center gap-3 
+                           hover:border-[#ff004f] transition-all duration-300 cursor-pointer group"
+                >
+                  <IconComponent className={`w-8 h-8 ${skill.color} group-hover:scale-110 transition-transform duration-300`} />
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
+                    {skill.name}
+                  </span>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
-        {/* === Right Column: Skills === */}
+        {/* Intermediate Skills */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="space-y-8"
         >
-          {skills.map((skill, index) => (
-            <div key={skill.name}>
-              <div className="flex justify-between mb-2">
-                <span className="font-medium text-gray-800 dark:text-gray-200">
-                  {skill.name}
-                </span>
-                <span className="text-[#ff004f] font-semibold">
-                  {skill.level}%
-                </span>
-              </div>
-
-              {/* Progress Bar */}
-              <div className="w-full bg-gray-200 dark:bg-gray-800 h-2 rounded-full overflow-hidden">
+          <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+            Intermediate
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {skillsData.intermediate.map((skill, index) => {
+              const IconComponent = skill.icon;
+              return (
                 <motion.div
-                  className="h-2 bg-[#ff004f] rounded-full"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
-                  transition={{ duration: 1, delay: index * 0.1 }}
+                  key={skill.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
                   viewport={{ once: true }}
-                />
-              </div>
-            </div>
-          ))}
+                  whileHover={{ 
+                    scale: 1.05, 
+                    boxShadow: "0 10px 25px rgba(255, 0, 79, 0.2)" 
+                  }}
+                  className="bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-800 
+                           rounded-lg p-4 flex flex-col items-center justify-center gap-3 
+                           hover:border-[#ff004f] transition-all duration-300 cursor-pointer group"
+                >
+                  <IconComponent className={`w-8 h-8 ${skill.color} group-hover:scale-110 transition-transform duration-300`} />
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
+                    {skill.name}
+                  </span>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        {/* Basic / Learning Skills */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+            Basic / Learning
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {skillsData.basic.map((skill, index) => {
+              const IconComponent = skill.icon;
+              return (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 + 0.8 }}
+                  viewport={{ once: true }}
+                  whileHover={{ 
+                    scale: 1.05, 
+                    boxShadow: "0 10px 25px rgba(255, 0, 79, 0.2)" 
+                  }}
+                  className="bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-800 
+                           rounded-lg p-4 flex flex-col items-center justify-center gap-3 
+                           hover:border-[#ff004f] transition-all duration-300 cursor-pointer group"
+                >
+                  <IconComponent className={`w-8 h-8 ${skill.color} group-hover:scale-110 transition-transform duration-300`} />
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
+                    {skill.name}
+                  </span>
+                </motion.div>
+              );
+            })}
+          </div>
         </motion.div>
       </div>
     </section>
   );
 }
-
-
-
-
-
-
-
-
-
-// "use client"
-
-
-
-// export default function Experience() {
-//   return (
-//  <section
-//         id="experience"
-//         className="flex flex-col items-center justify-center px-4 sm:px-8 md:px-24 py-12 sm:py-16 md:py-20 md:ml-24 bg-[#0a0a0a] text-white"
-//       >
-//         {/* Section Header */}
-//         <div className="text-center mb-16">
-//           <p className="text-[#ff004f] font-semibold mb-2">My Abilities</p>
-//           <h2 className="text-4xl md:text-5xl font-extrabold">My Experience</h2>
-//         </div>
-
-//         {/* Two Columns */}
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full max-w-6xl">
-//           {/* ===== Left Column ===== */}
-//           <div className="space-y-10">
-//             {/* Frontend Developer */}
-//             <div className="flex items-start gap-4">
-//               <div className="text-[#ff004f] text-2xl">{`{}`}</div>
-//               <div>
-//                 <h3 className="text-xl font-semibold">Frontend Developer</h3>
-//                 <p className="text-gray-400 text-sm">More than 2 years</p>
-//               </div>
-//             </div>
-
-//             {/* UI/UX Designer */}
-//             <div className="flex items-start gap-4">
-//               <div className="text-[#ff004f] text-2xl">📘</div>
-//               <div>
-//                 <h3 className="text-xl font-semibold">UI / UX Design</h3>
-//                 <p className="text-gray-400 text-sm">More than 1 year</p>
-//               </div>
-//             </div>
-
-//             {/* Backend Developer */}
-//             <div className="flex items-start gap-4">
-//               <div className="text-[#ff004f] text-2xl">💻</div>
-//               <div>
-//                 <h3 className="text-xl font-semibold">Backend Developer</h3>
-//                 <p className="text-gray-400 text-sm">1 year </p>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* ===== Right Column (Skill Bars) ===== */}
-//           <div className="space-y-8">
-//             {/* Skill Item */}
-//             {[
-//               { name: "Next.js", level: 70 },
-//               { name: "React", level: 80 },
-//               { name: "Node.js", level: 75 },
-//               { name: "Tailwind CSS", level: 85 },
-//               { name: "Shadcn/ui", level: 65 },
-//             ].map((skill) => (
-//               <div key={skill.name}>
-//                 <div className="flex justify-between mb-2">
-//                   <span className="font-medium">{skill.name}</span>
-//                   <span className="text-[#ff004f] font-semibold">{skill.level}%</span>
-//                 </div>
-//                 <div className="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
-//                   <div
-//                     className="h-2 bg-[#ff004f] rounded-full transition-all duration-700 ease-in-out"
-//                     style={{ width: `${skill.level}%` }}
-//                   ></div>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//   )
-// };
-   

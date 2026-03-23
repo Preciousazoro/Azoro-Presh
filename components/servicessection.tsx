@@ -29,41 +29,54 @@ export default function ServicesSection() {
   const services: Service[] = [
     {
       id: 1,
-      icon: "ri-code-s-slash-line",
-      title: "Web Development",
+      icon: "ri-rocket-line",
+      title: "Web Application Development",
       description:
-        "Custom websites and web applications built with modern technologies like React, Next.js, and TypeScript.",
+        "I build fast, responsive, and scalable web apps that improve user experience and performance.",
       details: [
-        "Custom website design and development",
-        "Web application development with React and Next.js",
-        "TypeScript and JavaScript development",
-        "Responsive design for all devices and screen sizes",
+        "Lightning-fast load times for better user retention",
+        "Mobile-responsive designs that convert more visitors",
+        "Scalable architecture that grows with your business",
+        "Enhanced user experience that drives engagement",
       ],
     },
     {
       id: 2,
-      icon: "ri-smartphone-line",
-      title: "Responsive Design",
+      icon: "ri-code-box-line",
+      title: "Full-Stack Development",
       description:
-        "Fully responsive designs that work seamlessly across all devices and screen sizes.",
+        "From frontend UI to backend APIs, I handle complete application development.",
       details: [
-        "Mobile-first design approach",
-        "Responsive design for all devices and screen sizes",
-        "Cross-browser compatibility",
-        "Accessible design for all users",
+        "End-to-end solutions saving you time and coordination costs",
+        "Seamless integration between frontend and backend systems",
+        "Comprehensive testing for reliable, bug-free applications",
+        "Single point of contact for faster development cycles",
       ],
     },
     {
       id: 3,
-      icon: "ri-paint-brush-line",
-      title: "Web App Developer",
+      icon: "ri-robot-line",
+      title: "AI Evaluation & Coding Tasks",
       description:
-        "Building fast, scalable, and modern web applications focused on performance, usability, and real-world business needs.",
+        "I analyze and improve AI-generated code for accuracy, efficiency, and quality.",
       details: [
-        "Full-stack web application development",
-        "Responsive and modern frontend interfaces",
-        "Backend APIs and database integration",
-        "Performance optimization and scalability",
+        "Enhanced code quality that reduces maintenance costs",
+        "Optimized performance for faster, more efficient applications",
+        "Security improvements to protect your data and users",
+        "Clean, documented code that your team can easily maintain",
+      ],
+    },
+    {
+      id: 4,
+      icon: "ri-briefcase-line",
+      title: "Freelance Web Solutions",
+      description:
+        "Need a dashboard, SaaS, or custom platform? I deliver production-ready solutions.",
+      details: [
+        "Custom dashboards that provide actionable business insights",
+        "SaaS platforms built for scalability and user retention",
+        "Rapid prototyping to validate your ideas quickly",
+        "Production-ready solutions that generate revenue from day one",
       ],
     },
   ];
@@ -83,11 +96,11 @@ export default function ServicesSection() {
         className="text-center mb-16"
       >
         <p className="text-[#ff004f] font-semibold mb-2">Services</p>
-        <h2 className="text-4xl md:text-5xl font-extrabold">What I Offer</h2>
+        <h2 className="text-4xl md:text-5xl font-extrabold">What I Do</h2>
       </motion.div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl w-full">
         {services.map((service, index) => (
           <motion.div
             key={service.id}
@@ -95,21 +108,27 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl 
-                       bg-gray-100 border border-gray-300 
+            className="p-6 rounded-2xl 
+                       bg-gray-50 border border-gray-200 
                        dark:bg-[#0f0f0f] dark:border-gray-800
-                       hover:border-[#ff004f] hover:-translate-y-2 
-                       transition-all duration-500 flex flex-col h-full"
+                       hover:border-[#ff004f] hover:-translate-y-3 hover:shadow-[0_10px_30px_#ff004f20]
+                       transition-all duration-500 flex flex-col h-full group cursor-pointer"
+            onClick={() => openServiceModal(service)}
           >
-            <div className="text-[#ff004f] text-3xl mb-6">
+            <div className="text-[#ff004f] text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
               <i className={service.icon}></i>
             </div>
-            <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+            <h3 className="text-xl font-bold mb-3 group-hover:text-[#ff004f] transition-colors">
+              {service.title}
+            </h3>
             <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed mb-6 grow">
               {service.description}
             </p>
             <button
-              onClick={() => openServiceModal(service)}
+              onClick={(e) => {
+                e.stopPropagation();
+                openServiceModal(service);
+              }}
               className="text-[#ff004f] font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all self-start"
             >
               View More <span>→</span>
@@ -177,7 +196,7 @@ export default function ServicesSection() {
                   onClick={closeModal}
                   className="inline-flex items-center gap-2 bg-[#ff004f] text-white px-6 py-2.5 rounded-md font-semibold hover:bg-[#e60047] transition"
                 >
-                  Get in Touch
+                  Request a Quote
                 </Link>
               </div>
             </motion.div>

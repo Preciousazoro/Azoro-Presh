@@ -9,9 +9,15 @@ export const useActiveSection = () => {
   const [activeSection, setActiveSection] = useState("home");
 
   const scrollToSection = (sectionId: string) => {
+    console.log(`Attempting to scroll to section: ${sectionId}`);
     const element = document.getElementById(sectionId);
-    if (element) element.scrollIntoView({ behavior: "smooth" });
-    setActiveSection(sectionId);
+    console.log(`Found element:`, element);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
+    } else {
+      console.error(`Section with id "${sectionId}" not found`);
+    }
   };
 
   useEffect(() => {
@@ -67,8 +73,8 @@ export default function Sidebar() {
               >
                 <div className="h-12 w-12 rounded-full overflow-hidden shadow-lg shadow-[#ff004f]/30">
                   <img
-                    src="https://i.postimg.cc/90ZV12RL/PFP-IMG.png"
-                    alt="AZ Logo"
+                    src="/LOGO.png"
+                    alt="AP Logo"
                     className="object-cover w-full h-full"
                   />
                 </div>

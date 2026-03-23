@@ -26,20 +26,56 @@ export default function AboutSection() {
       {/* Right Content */}
       <div className="max-w-2xl md:pl-16">
         <p className="text-[#ff004f] font-semibold mb-1">My Intro</p>
-        <h2 className="text-4xl font-extrabold mb-6">About me</h2>
+        <h2 className="text-4xl font-extrabold mb-6">About Me</h2>
 
-        <h3 className="text-xl font-bold mb-4">
-          Hi, I’m Azoro Precious, a Frontend & Web Application Developer based in Nigeria.
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-[15px]">
-          I specialize in building modern, responsive, and high-performance web applications with a strong focus on clean UI, usability, and scalability. I enjoy transforming ideas and designs into functional, intuitive digital experiences that feel fast and effortless for users.
+        <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-[15px] font-medium">
+          I'm a developer focused on delivering real-world solutions, not just writing code.
         </p>
-        <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-[15px]">
-          With over two years of hands-on experience, I have worked with technologies such as HTML, CSS, JavaScript, React, Next.js, Node.js, Tailwind CSS, and Shadcn/UI to build real-world projects and user-focused interfaces. I’m passionate about writing clean, maintainable code and continuously improving my skills to stay aligned with modern web standards.
-        </p>
-        <p className="text-gray-600 dark:text-gray-400 mb-10 leading-relaxed text-[15px]">
-          I thrive in collaborative environments, enjoy solving complex problems, and focus on building high-performance, accessible, and visually polished web applications.
-        </p>
+
+        {/* Bullet Points */}
+        <div className="space-y-4 mb-10">
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-[#ff004f] rounded-full mt-2 shrink-0"></div>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-[15px]">
+              Full-stack web developer specializing in React, Next.js, Node.js, and modern UI frameworks.
+            </p>
+          </div>
+          
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-[#ff004f] rounded-full mt-2 shrink-0"></div>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-[15px]">
+              I build scalable, responsive, and high-performance web applications.
+            </p>
+          </div>
+          
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-[#ff004f] rounded-full mt-2 shrink-0"></div>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-[15px]">
+              Strong experience with debugging, API integrations, and real-world problem solving.
+            </p>
+          </div>
+          
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-[#ff004f] rounded-full mt-2 shrink-0"></div>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-[15px]">
+              I also work on AI-related coding tasks including evaluation and prompt-based improvements.
+            </p>
+          </div>
+          
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-[#ff004f] rounded-full mt-2 shrink-0"></div>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-[15px]">
+              Passionate about building solutions that are efficient, user-friendly, and impactful.
+            </p>
+          </div>
+          
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-[#ff004f] rounded-full mt-2 shrink-0"></div>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-[15px]">
+              Open to remote work, freelance projects, and AI evaluation roles.
+            </p>
+          </div>
+        </div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
@@ -72,7 +108,7 @@ export default function AboutSection() {
              hover:bg-[#e60047] transition"
 >
   <FaUser className="w-4 h-4" />
-  Contact me
+  Let's Work Together
 </button>
 
       </div>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Web Developer | Next.js • React • Node.js • Tailwind • Shadcn",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/LOGO.png",
   }
 };
 
